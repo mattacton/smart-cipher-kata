@@ -1,0 +1,61 @@
+------------------------Cipher Crypto Kata-------------------------------------
+Caesar has nothing on this Crypto Cipher used by secret agents the 
+world over(by this I mean no one uses it). Currently this cipher is
+used by hand to convert covert messages into an unreadable message. 
+We need to make it automatic to encrypt the message and mostly
+automatic to decrypt the message. Decrypting will still take some
+human thinking, but we can get mostly there.
+
+When finished, your program should be able to follow all of the below
+rules and be able to turn:
+"the eagle has left the bananas in the nest"
+into unreadable text following the rules and then back into:
+"th[] [][]gl[] h[]s l[]ft th[] b[]n[]n[]s []n th[] n[]st"
+
+Below you will find the rules of the cipher and substitution letters. 
+
+Letter substitutions:
+Normal Letter ==> Cipher Letter
+
+d ==> p
+s ==> d
+t ==> b
+m ==> i
+l ==> q
+y ==> g
+c ==> f
+n ==> h
+p ==> j
+r ==> k
+k ==> l
+h ==> t
+z ==> y
+b ==> r
+g ==> a
+f ==> o
+q ==> m
+j ==> v
+v ==> e
+w ==> x
+x ==> u
+
+Cipher Rules
+1. Consonants can be translated via the table above.
+2. Vowels are not translated to another letter
+  a. A vowel will be noted by the letter immediately preceeding or following 
+      the vowel.
+  b. In the encrypted text, the vowel will be noted by two repeating letters
+      where one letter is upper case and the other is lower case.
+  c. E.G. Take the word "hall". The vowel could be replaced in the following
+      two ways:
+    1. "Hhll"
+    2. "hlLl"
+  d. two or more vowels next to each other can be noted as follows in the
+      word "beagle"
+    1. "?BbgLl" The ? denotes more than one vowel.
+    2. "BbgGLl"
+  e. Words with no consonants will be translated to one pair of [] per letter.
+3. Repeating consonants can be noted most of the time by the use of capital 
+      letters as shown below.
+    1. The word "butter" could be transformed into "BbTrR"
+    2. 
