@@ -57,5 +57,12 @@ Cipher Rules
   e. Words with no consonants will be translated to one pair of [] per letter.
 3. Repeating consonants can be noted most of the time by the use of capital 
       letters as shown below.
-    1. The word "butter" could be transformed into "BbTrR"
-    2. 
+    a. The word "butter" could be transformed into "BbTrR" The capital T
+      denotes 2 t's.
+    b. You may run into the scenario where you need double letters and a
+      vowel. You can note the situation as follows in the word "booggle":
+      1. "bg?G?Ll" The ? between the letter G denotes that there are 2 or
+        more G's following the 2 or more vowels. The trailing ? is once
+        again noting that there is 2 or more vowels preceeding the G.
+    c. More than 2 repeating consonants can be noted with a ?.
+      1. In the word "mittthrow" can be noted as "MmT?hrwW"
