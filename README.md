@@ -71,3 +71,49 @@ Vowels are not translated one for one as consonants. Instead vowels are denoted 
 For example the word "be" would be converted to "Rr".
 
 Or "eb" would convert to "rR".
+
+### Tests
+
+Encrypt tests
+
+<pre>
+         +----+------+----+
+  Input  | be | polo | i  |
+  Output | Rr | JjQq | [] |
+         +----+------+----+
+</pre>
+
+Decrypt tests
+
+<pre>
+         +-----+------+------+
+  Input  | Rr  | JjQq   | [] |
+  Output | b[] | p[]l[] | [] |
+         +-----+------+------+
+</pre>
+
+## Requirement 4 - multiple vowels
+
+Multiple vowels are denoted using a ? on the opposite side of the vowel.
+For example, "bee" would be converted to "?Rr"
+or "ood" would be converted to "pP?"
+
+### Tests
+
+Encrypt tests
+
+<pre>
+         +----+------+-----+
+  Input  | bee | ood | oo  |
+  Output | ?Rr | ?pP | []? |
+         +----+------+-----+
+</pre>
+
+Decrypt tests
+
+<pre>
+         +-----+---------+---+
+  Input  | ?Rr  | ?pP  | []? |
+  Output | b[]* | []*d | []* |
+         +-----+---------+---+
+</pre>
