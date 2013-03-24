@@ -66,7 +66,7 @@ Decrypt tests
 
 ## Requirement 3 - Singular Vowels
 
-Vowels are not translated one for one as consonants. Instead vowels are denoted by the consonants surrounding them. In the cipher a repeated letter where one is upper case and the other lower case, denotes that a vowel is next to the lower case letter.
+Vowels are not translated one for one as consonants are. Instead vowels are denoted by the consonants surrounding them. In the cipher a repeated letter where one is upper case and the other lower case, denotes that a vowel is next to the lower case letter.
 
 For example the word "be" would be converted to "Rr".
 
@@ -117,3 +117,31 @@ Decrypt tests
   Output | b[]* | []*d | []* |
          +-----+---------+---+
 </pre>
+
+## Requirement 5 - Multiple vowels combined with multiple consonants
+
+When dealing with multiple vowels and consonants, two ?'s are used instead of one to denote multiplicity.
+
+For example "ooggle" would translate to "a?A?Qq" The ? between the g's denotes that there are multiple g's. The ? at the end denotes that there are multiple vowels before the g's.
+
+### Tests
+
+Encrypt tests
+
+<pre>
+         +----+------+------+
+  Input  | ooggle | ffooodd |
+  Output | a?A?Qq | ?O?oP?  |
+         +----+------+------+
+</pre>
+
+Decrypt tests
+
+<pre>
+         +-----------+----------+
+  Input  | a?A?Qq    | ?O?oP?   |
+  Output | []*gg*l[] | ff*[]*d* |
+         +-----------+----------+
+</pre>
+
+## Requirement 6 - Word match
