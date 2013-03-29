@@ -60,7 +60,7 @@ Decrypt tests
 <pre>
          +-----+------+--------+
   Input  | B?  | eB?  | E?B?   |
-  Output | tt? | vtt? | vv?tt? |
+  Output | tt* | vtt* | vv*tt* |
          +-----+------+--------+
 </pre>
 
@@ -145,3 +145,25 @@ Decrypt tests
 </pre>
 
 ## Requirement 6 - Word match
+
+Seeing []*gg*l[] is not very helpful when trying to understand the meaning of a secret agent message. Luckily we have a helpful list of English words. Your requirement is to replace unknown words with a list of at most 5 words which may be a match. 
+
+[]'s need to be replaced with a vowel. 
+e.g. the word "to" would be encrypted to "Bb" which would then be decrypted to "t[]" With word match, "t[]" should be replaced with (ti, to) as those are words defined in the word list. 
+
+*'s denote repeating. When word matching only repeat up to 3 times. e.g. If you have tt*d, then only search for the word "ttd" and "tttd". 
+
+If you have a repeating vowel, you will still need to search up to 3 characters, but in this case, each character could be a different vowel. e.g. The word "eagle" would decrypt to "[]*gl[]". With this combination you could end up with words: "eagle", "oogle", etc.
+### Tests
+
+Decrypt tests
+
+<pre>
+         +---------+-----------------------+
+  Input  | Bb      | ?Rr                   |
+  Output | (ti,to) | (baa,bee,bio,boa,boo) |
+         +---------+-----------------------+
+  Input  |
+  Output |
+         +---------+-----------------------+
+</pre>
