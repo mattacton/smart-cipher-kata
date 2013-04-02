@@ -159,11 +159,14 @@ If you have a repeating vowel, you will still need to search up to 3 characters,
 Decrypt tests
 
 <pre>
-         +---------+-----------------------+
-  Input  | Bb      | ?Rr                   |
-  Output | (ti,to) | (baa,bee,bio,boa,boo) |
-         +---------+-----------------------+
-  Input  |
-  Output |
-         +---------+-----------------------+
+         +------------+-----------------------+
+  Input  | Bb         | ?Rr                   |
+  Output | (ti,to)    | (baa,bee,bio,boa,boo) |
+         +------------+-----------------------+
+  Input  | TtQ                                |
+  Output | (hall,hell,hill,hull)              |
+         +------------+-----------------------+
+  Input  | rK?        | Vv?B?bi               |
+  Output | (brr,brrr) | (jibbboom)            |
+         +------------------------------------+
 </pre>
